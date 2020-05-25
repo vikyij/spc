@@ -1,0 +1,48 @@
+.home {
+    margin: 50px;
+    color: #000000;
+}
+
+.home-heading {
+    margin-bottom: 50px;
+    font-weight: 800;
+    text-align: center;
+    font-size: 23px;
+}
+
+.home-btn {
+    background-color: #f4f5f7;
+    display: block;
+    padding: 15px 0;
+    margin: 5px -10px;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+}
+
+.home-btn:hover {
+    background-color: #F3CFB3;
+}
+
+.home-list {
+    margin-top: 50px;
+}
+
+.img-card {
+    height: 300px;
+}
+
+.card-body {
+    background-color: #f4f5f7;
+}
+
+.btn-cart {
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: 700;
+    padding: 15px;
+    border: 1px #dddada solid;
+}
+
+.btn-cart:hover {
+    border: 1px #000000 solid;
+}

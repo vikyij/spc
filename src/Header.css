@@ -1,0 +1,48 @@
+.header-nav {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 20px;
+}
+ 
+
+.header-btn {
+    padding: 0px;
+}
+
+.header-s {
+    color: #ced4da;
+}
+
+.form-control {
+    color: #495057;
+    background-color: transparent;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid #ced4da;
+}
+
+.form-control:hover {
+    color: #495057;
+    background-color: transparent;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid #ced4da;
+}
+
+.navbar-brand {
+    margin-right: 4rem;
+    font-size: 1.7rem;
+}
+
+.nav-link {
+    margin-right: 2rem;
+}
+
+.img-carousel {
+    height: 50vmin;
+}
+
+
