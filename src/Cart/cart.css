@@ -1,0 +1,19 @@
+.btn-black {
+    background: transparent;
+    font-size: 0.8rem !important;
+    text-transform: capitalize;
+    color: #000000;
+    border-radius: 0;
+    border: 0.1rem solid #000000 !important;
+}
+
+.btn-black:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+.del-icon {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: tomato;
+}

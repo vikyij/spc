@@ -24,7 +24,16 @@
 }
 
 .home-list {
-    margin-top: 50px;
+   margin-top: 30px;
+   padding: 20px;
+   width: 300px;
+}
+
+.product-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
 }
 
 .img-card {
@@ -41,8 +50,22 @@
     font-weight: 700;
     padding: 15px;
     border: 1px #dddada solid;
+    transition: all 1s linear;
 }
 
 .btn-cart:hover {
     border: 1px #000000 solid;
+}
+
+.img-container {
+     position: relative;
+     overflow: hidden;
+}
+
+.card-img-top {
+    transition: all 1s linear;
+}
+
+.img-container:hover .card-img-top{
+    transform: scale(1.2);
 }
