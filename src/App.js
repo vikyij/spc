@@ -29,9 +29,9 @@ function App() {
       
         <Route exact path='/nails'><Nails /></Route>
  
-        <Route exact path='/cart'><Cart /></Route>
+        <Route exact path='/cart' component={Cart} />
 
-        <Route component={Default}></Route>
+        <Route component={Default} />
 
         </Switch>
      <Switch>

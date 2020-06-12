@@ -1,12 +1,9 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import {Context} from './Context'
 
-
-
-import image1 from './images/raychan-oEpUUCO_ru0-unsplash.jpg'
-import image2 from './images/lippie-pencil_grande.jpg'
-import image3 from './images/brain-freeze_a_800x1200.jpg'
 
 function Lips() {
+    const {products} = useContext(Context)
     return (
         <div className='home'>
             <p className='eyes-heading'>LIPS</p>
@@ -29,52 +26,32 @@ function Lips() {
                 </select>
             </div>
 
+           
             <div className='row eyes-list'>
-                <div className='col-md-3'>
-                    <div class="card">
-                        <img class="card-img-top img-card" src={image1} alt="Card image" />
-                        <div class="card-body">
-                            <h4 class="card-title">Lip Gloss</h4>
-                            <p class="card-text">cushiony glassy shine.</p>
-                            <p class="card-text"> $3.00</p>
-                            <a href="#" class="btn btn-block stretched-link btn-cart">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div className='col-md-3'>
-                    <div class="card">
-                        <img class="card-img-top img-card" src={image2} alt="Card image" />
-                        <div class="card-body">
-                            <h4 class="card-title">Lip Gloss</h4>
-                            <p class="card-text">cushiony glassy shine.</p>
-                            <p class="card-text"> $3.00</p>
-                            <a href="#" class="btn btn-block stretched-link btn-cart">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div className='col-md-3'>
-                    <div class="card">
-                        <img class="card-img-top img-card" src={image3} alt="Card image" />
-                        <div class="card-body">
-                            <h4 class="card-title">Lip Gloss</h4>
-                            <p class="card-text">cushiony glassy shine.</p>
-                            <p class="card-text"> $3.00</p>
-                            <a href="#" class="btn btn-block stretched-link btn-cart">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div className='col-md-3'>
-                    <div class="card">
-                        <img class="card-img-top img-card" src={image1} alt="Card image" />
-                        <div class="card-body">
-                            <h4 class="card-title">Lip Gloss</h4>
-                            <p class="card-text">cushiony glassy shine.</p>
-                            <p class="card-text"> $3.00</p>
-                            <a href="#" class="btn btn-block stretched-link btn-cart">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
+                {
+                
+                products.map(product => {
+                    return (
+                     product.product_type === 'lip_liner' ? 
+                        <div className='col-md-3'>
+                            <div class="card">
+                                <img class="card-img-top img-card" src={product.image_link} alt="Card image" />
+                                <div class="card-body">
+                                    <h4 class="card-title">{product.name}</h4>
+                                    <p class="card-text">{product.product_type}</p>
+                                    <p class="card-text"> {product.price_sign} {product.price}</p>
+                                    <a href="#" class="btn btn-block stretched-link btn-cart">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div> : null
+                    ) 
+                }) 
+                }
+
+               
             </div>
+
+           
 
         </div>
     )

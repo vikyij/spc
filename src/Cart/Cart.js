@@ -6,10 +6,10 @@ import CartTotals from './CartTotals'
 import { Context } from '../Context'
 
 
-function Cart() {
+function Cart(props) {
     const { cartItems, cartTotal, 
             increment, decrement, removeItem,
-            cartTax, cartSubtotal, clearCart  } = useContext(Context)
+            cartTax, cartSubtotal, clearCart,  } = useContext(Context)
    
     if (cartItems.length > 0) {
         return(
@@ -28,7 +28,8 @@ function Cart() {
                                       cartTax={cartTax} 
                                       cartSubtotal={cartSubtotal} 
                                       cartTotal={cartTotal} 
-                                      clearCart={clearCart}/>
+                                      clearCart={clearCart}
+                                      history={props.history}/>
                         </section>
                     )
               

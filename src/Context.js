@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useReducer } from "react"
 import { productData } from './Data'
 
 const Context = React.createContext()
 
 //align-self-center mb-0 to make two stuffs align together on a straight line
-
+//useReducer to group states that belong together
 
 function ContextProvider({ children }) {
   const [products, setProducts] = useState([])
@@ -14,6 +14,12 @@ function ContextProvider({ children }) {
   const [cartSubtotal, setCartSubtotal] = useState(0)
   const [cartTax, setCartTax] = useState(0)
   const [cartTotal, setCartTotal] = useState(0)
+
+  const initialState ={
+    products: []
+  }
+
+ 
 
   useEffect(() => {
     setProducts(productData)
@@ -112,9 +118,6 @@ function ContextProvider({ children }) {
     cartTax, cartTotal
   };
 
-  if (!products) {
-    return <p>Loading...</p>
-  }
 
 
   return (
