@@ -9,10 +9,11 @@ import './home.css'
 
 
 function Products({ product}) {
-    const { addToCart, openModal} = useContext(Context)
-
+    const { addToCart, openModal, state} = useContext(Context)
+    
     return (
         <>
+            
             <div className='home-list' key={product.id}>
 
                 <div className="card">
@@ -21,8 +22,8 @@ function Products({ product}) {
                             <img className="card-img-top img-card" src={product.image_link} alt={product.name} />
                         </Link>
 
-                        <div className="card-body pt-5">
-                            <h4 className="card-title">{product.name}</h4>
+                        <div className="card-body pt-4">
+                            <p className="card-title"><b>{product.name}</b></p>
                             <p className="card-text">{product.product_type}</p>
                             <p className="card-text">{product.price_sign} {product.price} </p>
                             <button
@@ -33,7 +34,7 @@ function Products({ product}) {
                                           openModal(product)
                                           
                                           }}>
-                                {product.inCart ? (<p disabled>In Cart</p>) : (<p>Add to Cart</p>)}
+                                {product.inCart ? (<p style={{marginBottom: 0}} disabled>In Cart</p>) : (<p style={{marginBottom: 0}}>Add to Cart</p>)}
                             </button>
                         </div>
                     </div>

@@ -5,7 +5,7 @@ import './cart.css'
 function CartItem({item, increment, decrement, removeItem}) {
     const {id, name, image_link, price, price_sign, total, count} = item
     return (
-        <div className='row my-2 text-capitalize tex-center'>
+        <div className='row my-2 text-capitalize text-center'>
            <div className='col-10 mx-auto col-lg-2'>
                <img 
                     src={image_link}
@@ -24,7 +24,7 @@ function CartItem({item, increment, decrement, removeItem}) {
                {price_sign} {price}
            </div>
 
-           <div className='col-10 mx-auto col-lg-2 my-2 my-lg-0'>
+           <div className='col-10 mx-auto col-lg-2 '>
                <div className='d-flex'>
                    <div>
                        <span className='btn btn-black mx-1' onClick={() => decrement(id)}>-</span>

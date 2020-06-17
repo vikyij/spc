@@ -1,7 +1,7 @@
 import React from 'react'
 import CartItem from './CartItem'
 
-function CartList({cartItems, count, cartTotal, increment, decrement, removeItem}){
+function CartList({cartItems, cartTotal, increment, decrement, removeItem}){
     
     return (
         <div className='container-fluid'>

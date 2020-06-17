@@ -80,6 +80,22 @@ export const productData = [
   },
   {
     "id": 6,
+    "brand": "clinique",
+    "name": "High Impact™ Custom Black Kajal",
+    "price": "17.5",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://www.clinique.com/media/export/cms/products/181x209/clq_ZP4R01_181x209.png",
+    "description": "For kicked-up eye drama, go bold and black. Pigment-packed kajal pencil delivers rich, dark colour with 12 hours of staying power. Skip-proof formula resists smudging, sweat and humidity—even water. Ophthalmologist Tested. Appropriate for sensitive eyes and contact lens wearers, too.",
+    "rating": null,
+    "category": null,
+    "product_type": "eyeshadow",
+    'inCart': false,
+    'total': 0,
+    'count': 0
+  },
+  {
+    "id": 7,
     "brand": "physicians formula",
     "name": "Physicians Formula Mineral Wear Airbrushing Blush",
     "price": "15.49",
@@ -94,7 +110,7 @@ export const productData = [
     'count': 0
   },
   {
-    "id": 7,
+    "id": 8,
     "brand": "clinique",
     "name": "Chubby Stick\u0026trade; Moisturizing Lip Colour Balm",
     "price": "17.5",
@@ -110,7 +126,7 @@ export const productData = [
     'count': 0
   },
   {
-    "id": 8,
+    "id": 9,
     "brand": "clinique",
     "name": "Clinique Pop™ Matte Lip Colour + Primer",
     "price": "18.5",
@@ -126,7 +142,7 @@ export const productData = [
     'count': 0
   },
   {
-    "id": 9,
+    "id": 10,
     "brand": "clinique",
     "name": "Clinique Pop\u0026trade; Lip Colour + Primer",
     "price": "18.5",
@@ -142,9 +158,25 @@ export const productData = [
     'count': 0
   },
   {
-    "id": 10,
+    "id": 11,
     "brand": "clinique",
-    "name": "Clinique Pop\u0026trade; Lip Shadow Cushion Matte Lip Powder",
+    "name": "High Impact™ Custom Black Kajal",
+    "price": "17.5",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://www.clinique.com/media/export/cms/products/181x209/clq_ZP4R01_181x209.png",
+    "description": "For kicked-up eye drama, go bold and black. Pigment-packed kajal pencil delivers rich, dark colour with 12 hours of staying power. Skip-proof formula resists smudging, sweat and humidity—even water. Ophthalmologist Tested. Appropriate for sensitive eyes and contact lens wearers, too.",
+    "rating": null,
+    "category": null,
+    "product_type": "mascara",
+    'inCart': false,
+    'total': 0,
+    'count': 0
+  },
+  {
+    "id": 12,
+    "brand": "clinique",
+    "name": "Clinique Pop\u0026trade; Lip Shadow Cushion Matte Lip",
     "price": "19.5",
     "price_sign": "$",
     "currency": "USD",
@@ -158,7 +190,7 @@ export const productData = [
     'count': 0
   },
   {
-    "id": 11,
+    "id": 13,
     "brand": "dior",
     "name": "\n                            Junon\n                            ",
     "price": "20.0",
@@ -174,7 +206,7 @@ export const productData = [
     'count': 0
   },
   {
-    "id": 12,
+    "id": 14,
     "brand": "dior",
     "name": "\n                            Matte\n                            ",
     "price": "20.0",
@@ -190,7 +222,23 @@ export const productData = [
     'count': 0
   },
   {
-    "id": 13,
+    "id": 15,
+    "brand": "clinique",
+    "name": "High Impact™ Custom Black Kajal",
+    "price": "17.5",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://www.clinique.com/media/export/cms/products/181x209/clq_ZP4R01_181x209.png",
+    "description": "For kicked-up eye drama, go bold and black. Pigment-packed kajal pencil delivers rich, dark colour with 12 hours of staying power. Skip-proof formula resists smudging, sweat and humidity—even water. Ophthalmologist Tested. Appropriate for sensitive eyes and contact lens wearers, too.",
+    "rating": null,
+    "category": null,
+    "product_type": "eyelashes",
+    'inCart': false,
+    'total': 0,
+    'count': 0
+  },
+  {
+    "id": 16,
     "brand": "dior",
     "name": "\n                            Poison Metal\n                            ",
     "price": "20.0",
@@ -206,7 +254,7 @@ export const productData = [
     'count': 0
   },
   {
-    "id": 14,
+    "id": 17,
     "brand": "dior",
     "name": "\n                            Jungle Matte\n                            ",
     "price": "20.0",
@@ -222,7 +270,7 @@ export const productData = [
     'count': 0
   },
   {
-    "id": 15,
+    "id": 18,
     "brand": "dior",
     "name": "\n                            Miss Satin\n                            ",
     "price": "20.0",
@@ -238,7 +286,7 @@ export const productData = [
     'count': 0
   },
   {
-    "id": 16,
+    "id": 19,
     "brand": "dior",
     "name": "\n                            Mineral\n                            ",
     "price": "20.0",

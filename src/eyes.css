@@ -5,11 +5,17 @@
     font-size: 45px;
 }
 
+.eyes-card {
+    margin: 10px;
+    padding: 20px;
+    width: 50%;
+    height: 50%;
+}
+
 .eyes-select {
     display: inline-block;
-    width: 10%;   
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 400;
     border: 1px solid #ced4da;
     margin-right: 10px;
 }
@@ -24,4 +30,17 @@
 
 .eyes-list {
     margin-top: 20px;
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img-top {
+   transition: all 1s linear;
+}
+
+.img-container:hover .card-img-top{
+   transform: scale(1.2);
 }

@@ -17,3 +17,11 @@
     font-size: 1.2rem;
     color: tomato;
 }
+
+.cart-section {
+    margin: 50px;
+}
+
+.cart-columns {
+    margin: 20px 0px;
+}

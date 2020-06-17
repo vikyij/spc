@@ -7,9 +7,10 @@ import Face from './Face'
 import Nails from './Nails'
 import Footer from './Footer'
 import Cart from './Cart/Cart'
-import Default from './Default'
 import ProductDetails from './ProductDetails'
 import Modal from './Modal'
+import Login from './Login'
+import Signup from './Signup'
 import { Switch, Route } from 'react-router-dom'
 
 import './App.css';
@@ -19,7 +20,7 @@ function App() {
     <div className="App">
       <Header />
       <Switch>
-        <Route exact path='/'><ProductList /></Route>
+        <Route exact path='/' component={ProductList} />
       
         <Route exact path='/eyes'><Eyes /></Route>
      
@@ -28,10 +29,12 @@ function App() {
         <Route exact path='/face'><Face /></Route>
       
         <Route exact path='/nails'><Nails /></Route>
+
+        <Route exact path='/signup'><Signup /></Route>
+
+        <Route exact path='/login'><Login /></Route>
  
         <Route exact path='/cart' component={Cart} />
-
-        <Route component={Default} />
 
         </Switch>
      <Switch>

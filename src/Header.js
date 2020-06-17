@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { Context } from './Context'
 import { Link } from 'react-router-dom'
 import { FiSearch } from "react-icons/fi";
 import { FaShoppingCart } from "react-icons/fa";
@@ -7,7 +8,7 @@ import './Header.css'
 
 
 function Header() {
-
+      const {handleChange, handleSubmit} = useContext(Context)
     return (
         <div className='header-nav'>
             <nav className="navbar navbar-expand-sm navbar-dark">
@@ -30,9 +31,9 @@ function Header() {
                             <Link className="nav-link" to='/nails'>Nails</Link>
                         </li>
                     </ul>
-                    <form class="form-inline">
-                        <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn header-btn" type="submit"><FiSearch className='header-s' /></button>
+                    <form className="form-inline">
+                        <input onChange={(e) => handleChange(e)} className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button className="btn header-btn" type="submit" onClick={(e) => handleSubmit(e)}><FiSearch className='header-s' /></button>
                     </form>
                     <Link to='/cart'>
                         <button className='btn m-2 '>< FaShoppingCart className='my-cart' /></button>
