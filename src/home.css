@@ -38,6 +38,7 @@
 
 .img-card {
     height: 250px;
+    border-radius: 5px;
 }
 
 .card{
@@ -74,4 +75,36 @@
 
 .img-container:hover .card-img-top{
     transform: scale(1.2);
+}
+
+
+@media screen and (max-width: 600px) {
+    .home {
+        margin: 0px;
+    }
+
+    .home-row {
+        margin: 10px;
+    }
+
+    .home-list {
+        margin-top: 15px;
+        padding: 20px;
+        width: 100%; 
+    }
+    
+
+    .product-layout {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .home-heading {
+        margin-bottom: 30px;
+        margin-top: 30px;       
+        font-size: 20px;    
+    }
+    
 }

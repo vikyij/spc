@@ -18,7 +18,7 @@ function ProductDetails() {
             {thisProduct.map(product => {
                 return (
                     <>
-                    <div className='col-sm-4 mt-3'>
+                    <div className='col-sm-4 mt-3' key={product.id}>
                         <img className="card-img-top img-card" src={product.image_link} alt='images' />
                     </div>
 

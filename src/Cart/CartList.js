@@ -4,7 +4,7 @@ import CartItem from './CartItem'
 function CartList({cartItems, cartTotal, increment, decrement, removeItem}){
     
     return (
-        <div className='container-fluid'>
+        <>
             {
                 cartItems.map(item => {
                     return <CartItem key={item.id} 
@@ -16,7 +16,7 @@ function CartList({cartItems, cartTotal, increment, decrement, removeItem}){
                 })
             }
         
-        </div>
+        </>
     )
 }
 

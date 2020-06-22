@@ -53,7 +53,7 @@ const Login = () => {
                             </button> :
 
                             <Link to={{
-                                pathname: '/',
+                                pathname: '/cart',
                                 state: {
                                     uname: formik.values.uname
                                 }

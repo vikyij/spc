@@ -5,12 +5,19 @@
     font-size: 45px;
 }
 
-.eyes-card {
-    margin: 10px;
-    padding: 20px;
-    width: 50%;
-    height: 50%;
+.img-card {
+    height: 250px;
 }
+
+.card{
+    height: 500px
+}
+
+.card-body {
+    background-color: #f4f5f7;
+    height: 250px
+}
+
 
 .eyes-select {
     display: inline-block;
@@ -43,4 +50,20 @@
 
 .img-container:hover .card-img-top{
    transform: scale(1.2);
+}
+
+@media screen and (max-width: 600px) {
+    .eyes-heading {
+        margin-bottom: 30px;
+        margin-top: 30px;       
+        font-size: 20px;    
+    }
+
+    .eyes-list {
+        margin: 20px 10px;
+    }
+
+    .eyes-col {
+        margin-bottom: 20px;
+    }
 }

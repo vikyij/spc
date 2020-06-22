@@ -35,7 +35,7 @@ function Header() {
                         <input onChange={(e) => handleChange(e)} className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
                         <button className="btn header-btn" type="submit" onClick={(e) => handleSubmit(e)}><FiSearch className='header-s' /></button>
                     </form>
-                    <Link to='/cart'>
+                    <Link to='/login'>
                         <button className='btn m-2 '>< FaShoppingCart className='my-cart' /></button>
                     </Link>
                 </div>

@@ -7,16 +7,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgba(0.3,0.3, 0.4, 0.5);
+    z-index: 1;
 }
 
 .modal-img {
     margin-top: 10px;
     width: 400px;
     height: 300px;
-}
-
-.modal-row{
-    margin-top: 20px;
 }
 
 #modal {

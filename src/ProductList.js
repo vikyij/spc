@@ -1,35 +1,26 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { Context } from './Context'
 import Slider from './Slider'
 import Products from './Products'
-import { ToastContainer, toast } from 'react-toastify';
 
-import 'react-toastify/dist/ReactToastify.css';
 
 
 
 import './home.css'
 
 
-function ProductList(props) {
+function ProductList() {
     const { state } = useContext(Context)
     const { products, searchItems } = state
 
 
-    /**  const notify = () => toast(`Welcome ${props.location.state.uname}`)
-     useEffect(()=>
-     {
-         notify()
-          
-     }, [props.location.state.uname])
-    
-    */
+   
     return (
         <>
 
             <div className='home'>
-                <ToastContainer />
+                
 
                 {searchItems.length === 0 ?
 

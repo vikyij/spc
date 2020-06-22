@@ -6,3 +6,9 @@
 .btn-cart {
     margin-top: 0px;
 }
+
+@media screen and (max-width: 600px) {
+    .pd {
+        margin-top: 20px;
+    }
+}

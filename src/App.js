@@ -18,6 +18,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+     
       <Header />
       <Switch>
         <Route exact path='/' component={ProductList} />
@@ -43,6 +44,8 @@ function App() {
       
       <Modal />
       <Footer />
+      
+
     </div>
   );
 }

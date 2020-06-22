@@ -1,31 +1,31 @@
-import React, { useContext, useReducer,useState} from 'react'
+import React, { useContext, useReducer} from 'react'
 import { Link } from 'react-router-dom'
 import { Context } from './Context'
 
 import './eyes.css'
 const initialState = {
     checkedProductType: false,
-    checkedPrice: false,
-    text: '',
-    price: ''
+    checkedBrand: false,
+    productType: '',
+    brand: ''
 }
 
-function Reducer(state,action ) {
-    switch(action.type){
-        case 'GET_PRODUCTTYPE': 
-           return{
-               ...state,
-               checkedProductType: !state.checkedProductType,
-               text: action.payload
-           }
-           case 'GET_PRICE': 
-           return{
-               ...state,
-               checkedPrice: !state.checkedPrice,
-               price: action.payload
-           }
+function Reducer(state, action) {
+    switch (action.type) {
+        case 'GET_PRODUCTTYPE':
+            return {
+                ...state,
+                checkedProductType: !state.checkedProductType,
+                productType: action.payload
+            }
+        case 'GET_BRAND':
+            return {
+                ...state,
+                checkedBrand: !state.checkedBrand,
+                brand: action.payload
+            }
         default:
-            return {...state}
+            return { ...state }
     }
 }
 
@@ -36,23 +36,23 @@ function Eyes() {
     const { products } = state
 
 
-    const handleProduct = (e) => {
-        dispatch({type: 'GET_PRODUCTTYPE', payload: e.target.value})
+    const handleProductType = (e) => {
+        dispatch({ type: 'GET_PRODUCTTYPE', payload: e.target.value })
     }
 
-    const handlePrice = (e) => {
-        dispatch({type: 'GET_PRICE', payload: e.target.value})
-        console.log(mystate.price)
+    const handleBrand = (e) => {
+        dispatch({ type: 'GET_BRAND', payload: e.target.value })
+        console.log(mystate.brand)
     }
-    
+
     const filteredEyes = products.filter(product => {
         return (
-        product.product_type === 'eyeliner' || product.product_type ==='eyeshadow' || product.product_type ==='mascara' || product.product_type ==='eyelashes' 
-    )
+            product.product_type === 'eyeliner' || product.product_type === 'eyeshadow' || product.product_type === 'mascara' || product.product_type === 'eyelashes'
+        )
     })
-    const filtered = filteredEyes.filter(product => product.product_type === mystate.text)
-    const filteredPrice = filteredEyes.filter(product => product.price <= mystate.price)
-    console.log(filteredPrice)
+    const filteredProductType = filteredEyes.filter(product => product.product_type === mystate.productType)
+    const filteredBrand = filteredEyes.filter(product => product.brand === mystate.brand)
+    console.log(filteredBrand)
 
     return (
         <div className='home'>
@@ -60,60 +60,44 @@ function Eyes() {
 
             <div>
 
-                <button className='btn eyes-select' data-toggle="collapse" data-target="#demo">FILTER BY</button>
+                <button className='btn ml-4 eyes-select' data-toggle="collapse" data-target="#demo">FILTER BY</button>
 
                 <div id="demo" class="collapse">
                     <div className='card eyes-card'>
                         <div className='row'>
-                            <div className='col-4'>
+                            <div className='col-5'>
                                 <p>product type</p>
                                 <div class="form-check">
-                                    <p><input type="checkbox" class="form-check-input" value="eyeliner" onChange={(e) => handleProduct(e)}/>EyeLiner</p>
+                                    <p><input type="checkbox" class="form-check-input" value="eyeliner" onChange={(e) => handleProductType(e)} />EyeLiner</p>
                                 </div>
 
                                 <div class="form-check">
-                                    <p><input type="checkbox" class="form-check-input" value="eyeshadow" onChange={(e) => handleProduct(e)}/>EyeShadow</p>
+                                    <p><input type="checkbox" class="form-check-input" value="eyeshadow" onChange={(e) => handleProductType(e)} />EyeShadow</p>
                                 </div>
 
                                 <div class="form-check">
-                                    <p><input type="checkbox" class="form-check-input" value="mascara" onChange={(e) => handleProduct(e)}/>Mascara</p>
+                                    <p><input type="checkbox" class="form-check-input" value="mascara" onChange={(e) => handleProductType(e)} />Mascara</p>
                                 </div>
 
                                 <div class="form-check">
-                                    <p><input type="checkbox" class="form-check-input" value="eyelashes" onChange={(e) => handleProduct(e)} />Eyelashes</p>
+                                    <p><input type="checkbox" class="form-check-input" value="eyelashes" onChange={(e) => handleProductType(e)} />Eyelashes</p>
                                 </div>
                             </div>
 
-                            <div className='col-4'>
-                                <p>brand</p>
+                           
+                            <div className='col-5'>
+                                <p>Brand</p>
                                 <div class="form-check">
-                                    <p><input type="checkbox" class="form-check-input" value="" />clinique</p>
+                                    <p><input type="checkbox" class="form-check-input" value="clinique" onChange={(e) => handleBrand(e)} />Clinique</p>
                                 </div>
                                 <div class="form-check">
-                                    <p><input type="checkbox" class="form-check-input" value="" />Iman</p>
+                                    <p><input type="checkbox" class="form-check-input" value="iman" onChange={(e) => handleBrand(e)} />Iman</p>
                                 </div>
                                 <div class="form-check">
-                                    <p><input type="checkbox" class="form-check-input" value="" />Zaron</p>
+                                    <p><input type="checkbox" class="form-check-input" value="zaron" onChange={(e) => handleBrand(e)} />Zaron</p>
                                 </div>
                                 <div class="form-check">
-                                    <p><input type="checkbox" class="form-check-input" value="" />Classic</p>
-                                </div>
-
-                            </div>
-
-                            <div className='col-4'>
-                                <p>price</p>
-                                <div class="form-check">
-                                    <p><input type="checkbox" class="form-check-input" value="5" onChange={(e) => handlePrice(e)} />under $5</p>
-                                </div>
-                                <div class="form-check">
-                                    <p><input type="checkbox" class="form-check-input" value="10" onChange={(e) => handlePrice(e)} />$5 - $9.99</p>
-                                </div>
-                                <div class="form-check">
-                                    <p><input type="checkbox" class="form-check-input" value="20" onChange={(e) => handlePrice(e)} />$10 - $19.99</p>
-                                </div>
-                                <div class="form-check">
-                                    <p><input type="checkbox" class="form-check-input" value="30" onChange={(e) => handlePrice(e)} />$20 - 30$</p>
+                                    <p><input type="checkbox" class="form-check-input" value="classic" onChange={(e) => handleBrand(e)} />Classic</p>
                                 </div>
                             </div>
                         </div>
@@ -123,41 +107,69 @@ function Eyes() {
 
 
             <div className='row eyes-list'>
-                { mystate.checkedProductType ? 
-                   filtered.map(product => {
-                       return(
-                        <div className='col-md-3'>
-                        <div class="card">
-                            <div className='img-container'>
-                                <Link to={`/${product.id}`}>
-                                    <img className="card-img-top img-card" src={product.image_link} alt={product.name} />
-                                </Link>
-                                <div class="card-body">
-                                    <h4 class="card-title">{product.name}</h4>
-                                    <p class="card-text">{product.product_type}</p>
-                                    <p class="card-text"> {product.price_sign} {product.price}</p>
-                                    <button
-                                        className="btn btn-block btn-cart"
-                                        disabled={product.inCart ? true : false}
-                                        onClick={() => {
-                                            addToCart(product)
-                                            openModal(product)
+                {mystate.checkedProductType ?
+                    filteredProductType.map(product => {
+                        return (
+                            <div className='col-sm-6 col-lg-3 mb-3 eyes-col'>
+                                <div class="card">
+                                    <div className='img-container'>
+                                        <Link to={`/${product.id}`}>
+                                            <img className="card-img-top img-card" src={product.image_link} alt={product.name} />
+                                        </Link>
+                                        <div class="card-body">
+                                            <h4 class="card-title">{product.name}</h4>
+                                            <p class="card-text">{product.product_type}</p>
+                                            <p class="card-text"> {product.price_sign} {product.price}</p>
+                                            <button
+                                                className="btn btn-block btn-cart"
+                                                disabled={product.inCart ? true : false}
+                                                onClick={() => {
+                                                    addToCart(product)
+                                                    openModal(product)
 
-                                        }}>
-                                        {product.inCart ? (<p disabled>In Cart</p>) : (<p>Add to Cart</p>)}
-                                    </button>
+                                                }}>
+                                                {product.inCart ? (<p disabled>In Cart</p>) : (<p>Add to Cart</p>)}
+                                            </button>
 
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div> 
-                       )
-                   })
-                :
+                        )
+                    })
+                    : mystate.checkedBrand ?
+                        filteredBrand.map(product => {
+                            return (
+                                <div className='col-sm-6 col-lg-3 mb-3 eyes-col'>
+                                    <div class="card">
+                                        <div className='img-container'>
+                                            <Link to={`/${product.id}`}>
+                                                <img className="card-img-top img-card" src={product.image_link} alt={product.name} />
+                                            </Link>
+                                            <div class="card-body">
+                                                <h4 class="card-title">{product.name}</h4>
+                                                <p class="card-text">{product.product_type}</p>
+                                                <p class="card-text"> {product.price_sign} {product.price}</p>
+                                                <button
+                                                    className="btn btn-block btn-cart"
+                                                    disabled={product.inCart ? true : false}
+                                                    onClick={() => {
+                                                        addToCart(product)
+                                                        openModal(product)
 
-                    filteredEyes.map(product => {
-                        return (
-                                <div className='col-md-3'>
+                                                    }}>
+                                                    {product.inCart ? (<p disabled>In Cart</p>) : (<p>Add to Cart</p>)}
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        })
+                        : filteredEyes.map(product => {
+                            return (
+                                <div className='col-sm-6 col-lg-3 mb-3 eyes-col'>
                                     <div class="card">
                                         <div className='img-container'>
                                             <Link to={`/${product.id}`}>
@@ -183,8 +195,8 @@ function Eyes() {
                                     </div>
                                 </div>
 
-                        )
-                    })
+                            )
+                        })
                 }
 
 

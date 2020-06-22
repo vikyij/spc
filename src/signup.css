@@ -34,3 +34,9 @@ input:focus {
 a:hover {
     text-decoration: none;
 }
+
+@media screen and (max-width: 600px) {
+    .signup {
+        margin: 10px;
+    }
+}
