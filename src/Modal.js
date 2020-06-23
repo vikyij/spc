@@ -14,7 +14,6 @@ function Modal() {
     let location = useLocation()
    
 
-    console.log(location)
 
     if (!modalOpen) {
         return null
