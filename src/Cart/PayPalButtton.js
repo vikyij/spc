@@ -30,7 +30,7 @@ function PayPalButton({total, clearCart, history}) {
         // Document on Paypal's currency code: https://developer.paypal.com/docs/classic/api/currency_codes/
  
         const client = {
-            sandbox: AdDwTQ4UI89YXz2hx9HSWJukFGNGMszKZjXIH1ItsRE8GtZEdXzDnSztuzUJbQ0o0BQPlb-dldMuzlWn,
+            sandbox: 'AdDwTQ4UI89YXz2hx9HSWJukFGNGMszKZjXIH1ItsRE8GtZEdXzDnSztuzUJbQ0o0BQPlb-dldMuzlWn',
             production: 'YOUR-PRODUCTION-APP-ID',
         }
         // In order to get production's app-ID, you will have to send your app to Paypal for approval first
