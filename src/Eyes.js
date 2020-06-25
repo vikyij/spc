@@ -63,10 +63,10 @@ function Eyes() {
                 <button className='btn ml-4 eyes-select' data-toggle="collapse" data-target="#demo">FILTER BY</button>
 
                 <div id="demo" class="collapse">
-                    <div className='card eyes-card'>
-                        <div className='row'>
+                    <div className='eyes-card'>
+                        <div className='row m-3'>
                             <div className='col-5'>
-                                <p>product type</p>
+                                <p><b>Product Type</b></p>
                                 <div class="form-check">
                                     <p><input type="checkbox" class="form-check-input" value="eyeliner" onChange={(e) => handleProductType(e)} />EyeLiner</p>
                                 </div>
@@ -86,7 +86,7 @@ function Eyes() {
 
                            
                             <div className='col-5'>
-                                <p>Brand</p>
+                                <p><b>Brand</b></p>
                                 <div class="form-check">
                                     <p><input type="checkbox" class="form-check-input" value="clinique" onChange={(e) => handleBrand(e)} />Clinique</p>
                                 </div>

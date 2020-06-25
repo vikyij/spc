@@ -9,6 +9,13 @@
     height: 250px;
 }
 
+.eyes-card {
+   border: 1px solid #ced4da;
+   height: 230px;
+   width: 50%;
+   margin: 10px;
+}
+
 .card{
     height: 500px
 }
@@ -17,7 +24,6 @@
     background-color: #f4f5f7;
     height: 250px
 }
-
 
 .eyes-select {
     display: inline-block;
@@ -66,4 +72,8 @@
     .eyes-col {
         margin-bottom: 20px;
     }
+
+    .eyes-card {
+        width: 80%;
+     }
 }

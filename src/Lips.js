@@ -62,10 +62,10 @@ function Lips() {
                 <button className='btn ml-4 eyes-select' data-toggle="collapse" data-target="#demo">FILTER BY</button>
 
                 <div id="demo" className="collapse">
-                    <div className='card eyes-card'>
-                        <div className='row'>
+                    <div className='eyes-card'>
+                        <div className='row m-3'>
                             <div className='col-5'>
-                                <p>product type</p>
+                                <p><b>product type</b></p>
                                 <div className="form-check">
                                     <p><input type="checkbox" className="form-check-input" value="lipstick" onChange={(e) => handleProductType(e)} />Lipstick</p>
                                 </div>
@@ -85,7 +85,7 @@ function Lips() {
 
 
                             <div className='col-5'>
-                                <p>Brand</p>
+                                <p><b>Brand</b></p>
                                 <div className="form-check">
                                     <p><input type="checkbox" className="form-check-input" value="colourpop" onChange={(e) => handleBrand(e)} />Colourpop</p>
                                 </div>

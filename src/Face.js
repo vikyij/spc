@@ -62,10 +62,10 @@ function Face() {
                 <button className='btn ml-4 eyes-select' data-toggle="collapse" data-target="#demo">FILTER BY</button>
 
                 <div id="demo" class="collapse">
-                    <div className='card eyes-card'>
-                        <div className='row'>
+                    <div className='eyes-card'>
+                        <div className='row m-3'>
                             <div className='col-5'>
-                                <p>product type</p>
+                                <p><b>product type</b></p>
                                 <div class="form-check">
                                     <p><input type="checkbox" class="form-check-input" value="foundation" onChange={(e) => handleProductType(e)} />Foundation</p>
                                 </div>
@@ -85,7 +85,7 @@ function Face() {
 
 
                             <div className='col-5'>
-                                <p>Brand</p>
+                                <p><b>Brand</b></p>
                                 <div class="form-check">
                                     <p><input type="checkbox" class="form-check-input" value="classic" onChange={(e) => handleBrand(e)} />Classic</p>
                                 </div>
