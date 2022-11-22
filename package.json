@@ -16,7 +16,7 @@
     "react-paypal-express-checkout": "^1.0.5",
     "react-query": "^1.5.8",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "react-toastify": "^6.0.5",
     "react-virtual": "^2.2.0",
     "react-virtualized-auto-sizer": "^1.0.2",
